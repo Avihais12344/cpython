@@ -7140,7 +7140,9 @@ class MiscTestCase(unittest.TestCase):
             'PercentStyle', 'StrFormatStyle', 'StringTemplateStyle',
             'Filterer', 'PlaceHolder', 'Manager', 'RootLogger', 'root',
             'threading', 'logAsyncioTasks'}
-        support.check__all__(self, logging, not_exported=not_exported)
+        extra = {
+            "AnyLogger"}
+        support.check__all__(self, logging, not_exported=not_exported, extra=extra)
 
 
 # Set the locale to the platform-dependent default.  I have no idea
